@@ -20,7 +20,7 @@
   this table has NO spec-basis, full stop -- the advisor must not
   fabricate one, and the governor holds if it tries. As with
   `leathergoods`/9523's own brand-authenticity sub-citation and
-  `ictrepair`/9511's own media-sanitization sub-citation, ALL EIGHT
+  `ictrepair`/9511's own media-sanitization sub-citation, ALL NINE
   seeded jurisdictions actually have a real unit-pricing/price-marking
   enforcement regime here, reported honestly rather than forcing an
   artificial gap -- including MEX, whose closest statutory analog is a
@@ -30,7 +30,23 @@
   citation is the currently-ENACTED Anti-Commercial Fraud Law rather
   than the still-in-draft 'Consumer Protection Law' (public
   consultation ongoing as of 2024) -- the not-yet-enacted draft is
-  never cited as if it were live law.")
+  never cited as if it were live law. AUS is a further honesty-note
+  case, but the opposite shape from SAU: its unit-pricing sub-citation
+  (the Competition and Consumer (Industry Codes--Unit Pricing)
+  Regulations 2021) is itself a REMADE instrument that repealed and
+  replaced an earlier Trade Practices (Industry Codes--Unit Pricing)
+  Regulations 2009 -- the currently-in-force 2021 citation is used,
+  never the superseded 2009 one. AUS is also the first seeded
+  jurisdiction where the SAME authority (the ACCC) administers both
+  the general consumer-protection citation and the separate
+  unit-pricing citation -- unlike every other seeded jurisdiction's own
+  dedicated metrology/standards body for price -- because Australia's
+  unit-pricing regime is structured as a Part IVB industry code under
+  the very same Act as the general consumer law, not a separate
+  weights-and-measures statute; still a genuinely SEPARATE legal
+  instrument (a distinct regulation, schedule and code of conduct),
+  just administered by one regulator instead of two, reported as such
+  rather than papering over the structural difference.")
 
 (def catalog
   "iso3 -> requirement map. `:required-evidence` mirrors the generic
@@ -137,7 +153,19 @@
                               "Declaración de contenido neto (unit-pricing-disclosure record)"]
           :price-owner-authority "Secretaría de Economía (Dirección General de Normas) / PROFECO (joint verification)"
           :price-legal-basis "Ley de Infraestructura de la Calidad (LIC, 2020, superseded the former Ley Federal sobre Metrología y Normalización) + NOM-030-SCFI-2006 (net-content/quantity declaration on labels)"
-          :price-provenance "https://platiica.economia.gob.mx/normalizacion/nom-030-scfi-2006/"}})
+          :price-provenance "https://platiica.economia.gob.mx/normalizacion/nom-030-scfi-2006/"}
+   "AUS" {:name "Australia"
+          :owner-authority "Australian Competition and Consumer Commission (ACCC)"
+          :legal-basis "Competition and Consumer Act 2010 (Cth), Schedule 2 -- Australian Consumer Law (ACL)"
+          :national-spec "'One law, multiple regulators' national consumer-protection regime: the ACCC (national regulator) plus each state/territory's own consumer-affairs regulator (e.g. NSW Fair Trading, Consumer Affairs Victoria) jointly enforce the ACL's prohibitions on misleading/deceptive conduct, unconscionable conduct and false representations, plus its statutory consumer-guarantees regime"
+          :provenance "https://consumerlaw.gov.au/about/australian-consumer-law"
+          :required-evidence ["SKU-registration record"
+                              "Pricing-authorization record"
+                              "Sale record"
+                              "Unit-pricing-disclosure record"]
+          :price-owner-authority "Australian Competition and Consumer Commission (ACCC)"
+          :price-legal-basis "Competition and Consumer Act 2010 (Cth) s51AE (Part IVB, Industry Codes) -- Competition and Consumer (Industry Codes--Unit Pricing) Regulations 2021 (F2021L01017), Schedule 1: Retail Grocery Industry (Unit Pricing) Code of Conduct, a mandatory industry code applying to store-based grocery retailers with over 1,000 square metres of grocery floor space and to online grocery retailers (repealed and replaced the Trade Practices (Industry Codes--Unit Pricing) Regulations 2009)"
+          :price-provenance "https://www.accc.gov.au/business/industry-codes/unit-pricing-code"}})
 
 (defn spec-basis
   "The jurisdiction's requirement map, or nil -- nil means NO spec-basis,
@@ -180,7 +208,7 @@
   "The jurisdiction's unit-pricing/price-marking requirement map, or
   nil -- nil means this jurisdiction has NO formal statutory
   unit-pricing/price-marking regime this catalog is aware of. In this
-  R0 catalog all eight seeded jurisdictions actually have one (unlike
+  R0 catalog all nine seeded jurisdictions actually have one (unlike
   some prior siblings' own honest single-jurisdiction gap), reported
   honestly."
   [iso3]

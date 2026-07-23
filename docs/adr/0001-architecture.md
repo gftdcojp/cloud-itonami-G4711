@@ -120,13 +120,14 @@ Method of Sale of Commodities, adopted by most states), the UK's Price
 Marking Order 2004, Germany's Preisangabenverordnung (PAngV,
 implementing EU Directive 98/6/EC), and Japan's own 計量法 (Measurement
 Act) unit-price provisions. Unlike some prior repair-shop-cluster
-siblings' own honest single-jurisdiction gap, ALL EIGHT seeded
+siblings' own honest single-jurisdiction gap, ALL NINE seeded
 jurisdictions actually have a real regime here, reported honestly
 (matching `leathergoods`/9523's own and `ictrepair`/9511's own
 full-coverage sub-citations). Evaluated UNCONDITIONALLY on every
 `:sale/post` (every sale needs a price within its own declared band).
-See "Addendum: IND/SAU/ARE/MEX jurisdiction extension" below for the
-four jurisdictions seeded after this ADR was first written.
+See "Addendum: IND/SAU/ARE/MEX jurisdiction extension" and "Addendum:
+AUS jurisdiction extension" below for the five jurisdictions seeded
+after this ADR was first written.
 
 ### Decision 7: dedicated double-actuation-guard booleans
 
@@ -234,6 +235,76 @@ official government or standards-body domain (`ccpa.doca.gov.in`,
 by direct web research at extension time, never carried over from
 training-data recall alone.
 
+## Addendum: AUS jurisdiction extension
+
+`retailops.facts/catalog` grows from 8 to 9 seeded jurisdictions:
+Australia added, with a real general consumer-protection AND a real,
+SEPARATE unit-pricing citation -- same schema, no new fields. Verified
+directly against the Federal Register of Legislation
+(legislation.gov.au) and the ACCC's own site (accc.gov.au) at
+extension time, not carried over from training-data recall:
+
+- **General consumer-protection citation**: the Australian Consumer
+  Law (ACL), Schedule 2 to the *Competition and Consumer Act 2010*
+  (Cth) -- confirmed verbatim from the Australian Government's own ACL
+  portal (`consumerlaw.gov.au`): "The ACL is written in Schedule 2 of
+  the *Competition and Consumer Act 2010*." Enforcement is a "one law,
+  multiple regulators" model: the ACCC is "the national regulator," and
+  each state/territory's own consumer-affairs regulator (NSW Fair
+  Trading, Consumer Affairs Victoria, etc.) enforces the same law in
+  its own jurisdiction -- the same CMA/Trading-Standards national/local
+  split GBR's own entry already records, independently confirmed here
+  for AUS.
+- **Unit-pricing citation**: the *Competition and Consumer (Industry
+  Codes--Unit Pricing) Regulations 2021* (F2021L01017, registered
+  26 July 2021, commenced 1 October 2021), made under s51AE
+  (Part IVB, Industry Codes) of the *Competition and Consumer Act
+  2010*. Its Schedule 1, the "Retail Grocery Industry (Unit Pricing)
+  Code of Conduct," is declared a mandatory industry code by the
+  regulation's own section 4: "the industry code set out in Schedule 1
+  ... is prescribed for the purposes of Part IVB of that Act; and is
+  declared to be a mandatory industry code." Confirmed by directly
+  reading the as-made PDF text fetched from legislation.gov.au this
+  session (`F2021L01017/asmade/2021-07-26/text/original/pdf`). The code
+  applies to a "store-based grocery retailer" (retail premises "that
+  have more than 1,000 square metres of floor space dedicated to the
+  display of grocery items ... used primarily for the sale of
+  food-based grocery items") and to any "online grocery retailer,"
+  across an enumerated "minimum range" of grocery categories (bread,
+  breakfast cereal, butter, eggs, flour, fresh fruit and vegetables,
+  fresh milk, meat, rice, sugar, and packaged food) -- verbatim from
+  Schedule 1 clause 3's own definitions.
+
+Two honesty notes worth recording, because both diverge from a less
+careful pass:
+
+- **The 2021 regulation is a REMADE instrument, not the original.**
+  Schedule 2 to the 2021 regulation itself repeals the *Trade Practices
+  (Industry Codes--Unit Pricing) Regulations 2009* -- the older,
+  now-superseded instrument a less careful search would surface first
+  (legislative instruments in Australia sunset roughly every 10 years
+  under the *Legislation Act 2003* and get remade). The
+  currently-in-force 2021 citation is used; the repealed 2009 one is
+  named here only as historical context, never cited as if it were
+  still live law -- the same "verify what's currently enacted, not
+  what's most commonly assumed" discipline SAU's own addendum note
+  already establishes.
+- **AUS is the first seeded jurisdiction where ONE regulator (the
+  ACCC) administers BOTH citations.** Every other seeded jurisdiction
+  (JPN/USA/GBR/DEU/IND/SAU/ARE/MEX) has a dedicated metrology/standards
+  body for the unit-pricing citation, distinct from its general
+  consumer-protection regulator. Australia's unit-pricing regime is
+  instead a Part IVB industry code under the very same Act as the
+  general consumer law (the ACL is Schedule 2; the Unit Pricing Code is
+  made under s51AE and given effect via its own separate Schedule 1
+  regulation) -- genuinely a SEPARATE legal instrument (distinct
+  regulation, distinct schedule, distinct code of conduct, its own
+  distinct application/exemption/enforcement rules), just administered
+  by one national regulator instead of two. Reported as such rather
+  than either inventing a second AUS metrology body that does not
+  administer this code, or dropping the sub-citation as if AUS lacked
+  one.
+
 ## References
 
 - `cloud-itonami-isic-6511/docs/adr/0001-architecture.md` (origin of
@@ -255,3 +326,8 @@ training-data recall alone.
   Standards (UAE)
 - NOM-030-SCFI-2006 under the Ley de Infraestructura de la Calidad
   (Mexico)
+- Competition and Consumer Act 2010 (Cth), Schedule 2 -- Australian
+  Consumer Law (Australia)
+- Competition and Consumer (Industry Codes--Unit Pricing) Regulations
+  2021 (F2021L01017), Schedule 1 -- Retail Grocery Industry (Unit
+  Pricing) Code of Conduct (Australia)

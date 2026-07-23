@@ -11,12 +11,17 @@
     (is (some? (facts/spec-basis iso3)) (str iso3 " spec-basis"))
     (is (string? (:provenance (facts/spec-basis iso3))) (str iso3 " provenance"))))
 
-(deftest all-eight-seeded-jurisdictions-have-a-price-spec-basis
+(deftest aus-has-a-spec-basis
+  ;; ninth seeded jurisdiction, added after the IND/SAU/ARE/MEX batch
+  (is (some? (facts/spec-basis "AUS")))
+  (is (string? (:provenance (facts/spec-basis "AUS")))))
+
+(deftest all-nine-seeded-jurisdictions-have-a-price-spec-basis
   ;; unlike some prior repair-shop-cluster siblings' own honest single-
-  ;; jurisdiction gap, ALL EIGHT seeded jurisdictions actually have a
+  ;; jurisdiction gap, ALL NINE seeded jurisdictions actually have a
   ;; real unit-pricing/price-marking enforcement regime here --
   ;; reported honestly, not forced narrower
-  (doseq [iso3 ["JPN" "USA" "GBR" "DEU" "IND" "SAU" "ARE" "MEX"]]
+  (doseq [iso3 ["JPN" "USA" "GBR" "DEU" "IND" "SAU" "ARE" "MEX" "AUS"]]
     (is (some? (facts/price-spec-basis iso3)) (str iso3 " price-spec-basis"))
     (is (string? (:price-provenance (facts/price-spec-basis iso3))) (str iso3 " price-provenance"))))
 

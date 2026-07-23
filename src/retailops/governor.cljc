@@ -110,9 +110,9 @@
                                        98/6/EC), Japan's own 計量法
                                        (Measurement Act) unit-price
                                        provisions, and India/Saudi
-                                       Arabia/UAE/Mexico's own seeded
-                                       regimes (`retailops.facts`) --
-                                       ALL EIGHT seeded jurisdictions
+                                       Arabia/UAE/Mexico/Australia's own
+                                       seeded regimes (`retailops.facts`) --
+                                       ALL NINE seeded jurisdictions
                                        actually have a real regime here,
                                        reported honestly (matching
                                        `leathergoods`/9523's own and
